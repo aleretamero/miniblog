@@ -15,7 +15,7 @@ const Register = () => {
             name="displayName"
             required
             placeholder="Nome do usuário"
-            autoComplete='name'
+            autoComplete="name"
           />
         </label>
         <label>
@@ -25,7 +25,7 @@ const Register = () => {
             name="email"
             required
             placeholder="E-mail do usuário"
-            autocomplete="email"
+            autoComplete="email"
           />
         </label>
         <label>
@@ -35,7 +35,7 @@ const Register = () => {
             name="password"
             required
             placeholder="Insira sua senha"
-            autocomplete="new-password"
+            autoComplete="new-password"
           />
         </label>
         <label>
@@ -45,7 +45,7 @@ const Register = () => {
             name="confirmPassword"
             required
             placeholder="Confirme a sua senha"
-            autocomplete="new-password"
+            autoComplete="new-password"
           />
         </label>
         <button className="btn">Cadastrar</button>
