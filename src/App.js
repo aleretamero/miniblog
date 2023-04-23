@@ -13,7 +13,10 @@ import { AuthProvider } from './context/AuthContext';
 // pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Search from './pages/Seach';
+import Post from './pages/Post';
 import CreatePost from './pages/CreatePost';
+import EditPost from './pages/EditPost';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -47,6 +50,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/posts/:id" element={<Post />} />
+              <Route path="/search" element={<Search />} />
               <Route
                 path="/login"
                 element={!user ? <Login /> : <Navigate to="/" />}
@@ -58,6 +63,10 @@ function App() {
               <Route
                 path="/posts/create"
                 element={user ? <CreatePost /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/posts/edit/:id"
+                element={user ? <EditPost /> : <Navigate to="/login" />}
               />
               <Route
                 path="/dashboard"
