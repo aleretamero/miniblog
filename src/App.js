@@ -46,7 +46,7 @@ function App() {
       <AuthProvider value={{ user }}>
         <BrowserRouter>
           <Navbar />
-          <div className='min-vh-100'>
+          <div className='min-vh-100 p-1'>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
