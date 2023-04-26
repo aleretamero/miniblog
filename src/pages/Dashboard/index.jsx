@@ -27,7 +27,7 @@ const Dashboard = () => {
         {posts && posts.length === 0 ? (
           <div>
             <p>Não foram encontrados posts</p>
-            <Link to="/posts/create" className="btn">
+            <Link to="/posts/create" className="btn btn-outline-light">
               Criar primeiro post
             </Link>
           </div>
@@ -40,37 +40,39 @@ const Dashboard = () => {
 
             <div className="d-flex flex-column gap-3">
               {posts &&
-                posts.map(post => (
-                  <div
-                    key={post.id}
-                    className="d-flex align-items-center border-top pt-3"
-                  >
-                    <p className="w-50 m-0 fw-bold">{post.title}</p>
-                    <div className="w-50 d-flex justify-content-center gap-3 flex-wrap">
-                      <Link
-                        to={`/posts/${post.id}`}
-                        className="btn btn-primary"
-                        style={{ width: '100px' }}
-                      >
-                        Ver
-                      </Link>
-                      <Link
-                        to={`/posts/edit/${post.id}`}
-                        className="btn btn-primary"
-                        style={{ width: '100px' }}
-                      >
-                        Editar
-                      </Link>
-                      <button
-                        onClick={() => deleteDocument(post.id)}
-                        className="btn btn-danger"
-                        style={{ width: '100px' }}
-                      >
-                        Excluir
-                      </button>
+                posts
+                  .filter(post => post.createdBy === user.displayName)
+                  .map(post => (
+                    <div
+                      key={post.id}
+                      className="d-flex align-items-center border-top pt-3"
+                    >
+                      <p className="w-50 m-0 fw-bold">{post.title}</p>
+                      <div className="w-50 d-flex justify-content-center gap-3 flex-wrap">
+                        <Link
+                          to={`/posts/${post.id}`}
+                          className="btn btn-primary"
+                          style={{ width: '100px' }}
+                        >
+                          Ver
+                        </Link>
+                        <Link
+                          to={`/posts/edit/${post.id}`}
+                          className="btn btn-primary"
+                          style={{ width: '100px' }}
+                        >
+                          Editar
+                        </Link>
+                        <button
+                          onClick={() => deleteDocument(post.id)}
+                          className="btn btn-danger"
+                          style={{ width: '100px' }}
+                        >
+                          Excluir
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
             </div>
           </>
         )}
