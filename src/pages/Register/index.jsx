@@ -44,7 +44,7 @@ const Register = () => {
   }, [authError]);
 
   return (
-    <div className="d-flex flex-column gap-5 justify-content-center align-items-center min-vh-100">
+    <div className="d-flex flex-column gap-5 p-3 justify-content-start align-items-center min-vh-100">
       <div className="text-center">
         <p className="fs-2">Cadastre-se para postar</p>
         <p>Crie seu usuário e compartilhe suas histórias</p>
