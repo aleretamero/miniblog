@@ -42,7 +42,7 @@ const Home = () => {
           </form>
         </div>
 
-        <div className="d-flex flex-wrap gap-5 justify-content-center align-items-center text-center">
+        <div className="d-flex flex-wrap gap-3 justify-content-center align-items-center text-center">
           {loading && <p>Carregando...</p>}
           {posts && posts.map(post => <PostDetail key={post.id} post={post} />)}
           {posts && posts.length === 0 && (
