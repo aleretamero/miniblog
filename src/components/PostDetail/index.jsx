@@ -4,7 +4,7 @@ const PostDetail = ({ post }) => {
   return (
     <div
       className="card text-bg-dark mb-3 p-1"
-      style={{ maxWidth: '300px', height: '400px', overflow: 'hidden' }}
+      style={{ width: '250px', height: '400px', overflow: 'hidden' }}
     >
       <img
         src={post.image}

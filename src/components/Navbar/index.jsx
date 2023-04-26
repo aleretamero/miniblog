@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar navbar-expand-lg container-fluid bg-dark p-3 fixed-top"
+      className="navbar navbar-expand-lg container-fluid bg-dark p-3"
       data-bs-theme="dark"
     >
       <nav className="container d-flex justify-content-between gap-3">
