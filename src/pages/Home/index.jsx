@@ -18,11 +18,11 @@ const Home = () => {
   };
 
   return (
-    <div className="container-fluid mt-5">
-      <div className="container d-flex flex-column justify-content-center align-items-center gap-5">
-        <div className="mt-5 d-flex flex-column justify-content-center align-items-center gap-3">
+    <div className="container-fluid p-3">
+      <div className="container d-flex flex-column justify-content-start align-items-center gap-5">
+        <div className="d-flex flex-column justify-content-start align-items-center gap-3">
           <h2>Veja os nossos posts mais recentes</h2>
-          <form className="input-group mb-3" onSubmit={handleSubmit}>
+          <form className="input-group" onSubmit={handleSubmit}>
             <input
               className="form-control"
               type="text"
