@@ -55,7 +55,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="container min-vh-100 mt-5 py-5 d-flex flex-column justify-content-center align-items-center gap-3">
+    <div className="container min-vh-100 d-flex flex-column justify-content-start align-items-center gap-3 p-3">
       <div className="text-center">
         <h2>Criar post</h2>
         <p>Escreva sobre o que quiser e compartilhe o seu conhecimento!</p>
@@ -144,10 +144,10 @@ const CreatePost = () => {
         </div>
 
         {!response.loading && (
-          <button className="w-25 btn btn-primary">Cadastrar</button>
+          <button className="btn btn-primary py-2 px-4">Cadastrar</button>
         )}
         {response.loading && (
-          <button className="w-25 btn btn-primary" disabled>
+          <button className="btn btn-primary py-2 px-4" disabled>
             Aguarde...
           </button>
         )}
