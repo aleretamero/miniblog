@@ -6,7 +6,7 @@ const Post = () => {
   const { document: post, loading } = useFetchDocument('posts', id);
 
   return (
-    <div className="container min-vh-100 d-flex justify-content-center align-items-center p-5">
+    <div className="container min-vh-100 d-flex justify-content-center align-items-center p-1">
       {loading && <p>Carregando post...</p>}
       {post && (
         <div className="card">
