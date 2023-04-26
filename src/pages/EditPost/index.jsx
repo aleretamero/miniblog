@@ -77,7 +77,7 @@ const EditPost = () => {
   return (
     <>
       {post && (
-        <div className="container min-vh-100 mt-5 py-5 d-flex flex-column justify-content-center align-items-center gap-3">
+        <div className="container min-vh-100 d-flex flex-column justify-content-start align-items-center gap-3 p-3">
           <div className="text-center">
             <h2>Editando post: {post.title}</h2>
             <p>Altere os dados do post como desejar</p>
@@ -170,10 +170,10 @@ const EditPost = () => {
             </div>
 
             {!response.loading && (
-              <button className="w-25 btn btn-primary">Editar</button>
+              <button className="btn btn-primary py-2 px-4">Editar</button>
             )}
             {response.loading && (
-              <button className="w-25 btn btn-primary" disabled>
+              <button className="btn btn-primary py-2 px-4" disabled>
                 Aguarde...
               </button>
             )}
