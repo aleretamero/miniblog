@@ -42,13 +42,13 @@ const Home = () => {
           </form>
         </div>
 
-        <div className="d-flex flex-wrap gap-5 justify-content-center align-items-center ">
+        <div className="d-flex flex-wrap gap-5 justify-content-center align-items-center text-center">
           {loading && <p>Carregando...</p>}
           {posts && posts.map(post => <PostDetail key={post.id} post={post} />)}
           {posts && posts.length === 0 && (
             <div>
               <p>Não foram encontrados posts</p>
-              <Link to="/posts/create" className="btn">
+              <Link to="/posts/create" className="btn btn-outline-dark">
                 Criar primeiro post
               </Link>
             </div>
