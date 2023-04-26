@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="container mt-5 min-vh-100 d-flex flex-column justify-content-center align-items-center gap-2">
-      <h2 className="my-5">
+    <div className="container min-vh-100 d-flex flex-column justify-content-start align-items-center gap-3 p-3">
+      <h2 className="mb-5">
         Sobre o Mini <span>Blog</span>
       </h2>
       <p className="fs-2">
@@ -19,7 +19,7 @@ const About = () => {
       <div>
         <Link
           to="/posts/create"
-          className="btn btn-primary btn-lg m-5 py-2 px-4 fs-2"
+          className="btn btn-primary btn-lg py-2 px-4"
         >
           Criar post
         </Link>
