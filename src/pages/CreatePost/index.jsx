@@ -65,9 +65,9 @@ const CreatePost = () => {
         autoComplete="off"
         className="w-100 d-flex flex-column align-items-center"
       >
-        <div class="input-group mb-3">
+        <div className="input-group mb-3">
           <span
-            class="input-group-text bg-dark text-light"
+            className="input-group-text bg-dark text-light"
             id="inputGroup-sizing-default"
           >
             Título
@@ -75,7 +75,7 @@ const CreatePost = () => {
           <input
             type="text"
             name="title"
-            class="form-control"
+            className="form-control"
             required
             placeholder="Pense num bom título..."
             aria-label="Sizing example input"
@@ -85,9 +85,9 @@ const CreatePost = () => {
           />
         </div>
 
-        <div class="input-group mb-3">
+        <div className="input-group mb-3">
           <span
-            class="input-group-text bg-dark text-light"
+            className="input-group-text bg-dark text-light"
             id="inputGroup-sizing-default"
           >
             URL da imagem
@@ -95,7 +95,7 @@ const CreatePost = () => {
           <input
             type="text"
             name="image"
-            class="form-control"
+            className="form-control"
             required
             placeholder="Insira uma imagem que representa o seu post"
             aria-label="Sizing example input"
@@ -105,9 +105,9 @@ const CreatePost = () => {
           />
         </div>
 
-        <div class="input-group mb-3">
+        <div className="input-group mb-3">
           <span
-            class="input-group-text bg-dark text-light"
+            className="input-group-text bg-dark text-light"
             id="inputGroup-sizing-default"
           >
             Conteúdo
@@ -116,16 +116,16 @@ const CreatePost = () => {
             name="body"
             required
             placeholder="Insira o conteúdo do post"
-            class="form-control"
+            className="form-control"
             aria-label="With textarea"
             value={body}
             onChange={e => setBody(e.target.value)}
           ></textarea>
         </div>
 
-        <div class="input-group mb-3">
+        <div className="input-group mb-3">
           <span
-            class="input-group-text bg-dark text-light"
+            className="input-group-text bg-dark text-light"
             id="inputGroup-sizing-default"
           >
             Tags
@@ -133,7 +133,7 @@ const CreatePost = () => {
           <input
             type="text"
             name="tags"
-            class="form-control"
+            className="form-control"
             required
             placeholder="Insira as tags separadas por vírgula"
             aria-label="Sizing example input"
