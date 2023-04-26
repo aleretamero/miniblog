@@ -5,20 +5,17 @@ import { useQuery } from '../../hooks/useQuery';
 
 import PostDetail from '../../components/PostDetail';
 
-import styles from './styles.module.css';
-
 const Search = () => {
   const query = useQuery();
   const search = query.get('q');
-
   const { documents: posts } = useFetchDocuments('posts', search);
 
   return (
-    <div className={styles.searchContainer}>
-      <h2>Search</h2>
-      <div>
+    <div className="container-sm min-vh-100 d-flex flex-column gap-3 justify-content-center align-items-center">
+      <h2 className="fs-2">Busca</h2>
+      <div className="d-flex flex-wrap gap-3 justify-content-center align-items-center">
         {posts && posts.length === 0 && (
-          <div className={styles.noposts}>
+          <div className="d-flex flex-column ">
             <p>Não foram encontrados posts a partir da sua busca...</p>
             <Link to="/" className="btn btn-dark">
               Voltar

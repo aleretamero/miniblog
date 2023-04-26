@@ -5,8 +5,6 @@ import { useAuthValue } from '../../context/AuthContext';
 import { useUpdateDocument } from '../../hooks/useUpdateDocument';
 import { useFetchDocument } from '../../hooks/useFetchDocument';
 
-import styles from './styles.module.css';
-
 const EditPost = () => {
   const { id } = useParams();
   const { document: post } = useFetchDocument('posts', id);
@@ -16,14 +14,14 @@ const EditPost = () => {
   const [body, setBody] = useState('');
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState('');
-  const [imgPreview, setImgPreview] = useState('')
+  const [imgPreview, setImgPreview] = useState('');
 
   useEffect(() => {
     if (post) {
       setTitle(post.title);
       setImage(post.image);
       setBody(post.body);
-      setImgPreview(post.image)
+      setImgPreview(post.image);
 
       const textTags = post.tagsArray.join(', ');
       setTags(textTags);
@@ -77,74 +75,114 @@ const EditPost = () => {
   };
 
   return (
-    <div className={styles.editPost}>
+    <>
       {post && (
-        <>
-          <h2>Editando post: {post.title}</h2>
-          <p>Altere os dados do post como desejar</p>
-          <form onSubmit={handleSubmit} autoComplete="off">
-            <label>
-              <span>Título:</span>
+        <div className="container min-vh-100 mt-5 py-5 d-flex flex-column justify-content-center align-items-center gap-3">
+          <div className="text-center">
+            <h2>Editando post: {post.title}</h2>
+            <p>Altere os dados do post como desejar</p>
+          </div>
+          <form
+            onSubmit={handleSubmit}
+            autoComplete="off"
+            className="w-100 d-flex flex-column align-items-center"
+          >
+            <div className="input-group mb-3">
+              <span
+                className="input-group-text bg-dark text-light"
+                id="inputGroup-sizing-default"
+              >
+                Título
+              </span>
               <input
                 type="text"
                 name="title"
+                className="form-control"
                 required
                 placeholder="Pense num bom título..."
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
                 value={title}
                 onChange={e => setTitle(e.target.value)}
               />
-            </label>
-            <label>
-              <span>URL da imagem:</span>
+            </div>
+            <div className="input-group mb-3">
+              <span
+                className="input-group-text bg-dark text-light"
+                id="inputGroup-sizing-default"
+              >
+                URL da imagem
+              </span>
               <input
                 type="text"
                 name="image"
+                className="form-control"
                 required
                 placeholder="Insira uma imagem que representa o seu post"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
                 value={image}
                 onChange={e => setImage(e.target.value)}
               />
-            </label>
-            <p className={styles.previewTitle}>Preview da imagem atual:</p>
-            <img
-              className={styles.imagePreview}
-              src={imgPreview}
-              alt={post.title}
-            />
-            <label>
-              <span>Conteúdo:</span>
+            </div>
+
+            <div className="mb-3">
+              <p className="text-center fw-bold">Preview da imagem atual</p>
+              <img className="img-fluid" src={imgPreview} alt={post.title} />
+            </div>
+
+            <div className="input-group mb-3">
+              <span
+                className="input-group-text bg-dark text-light"
+                id="inputGroup-sizing-default"
+              >
+                Conteúdo
+              </span>
               <textarea
                 name="body"
                 required
                 placeholder="Insira o conteúdo do post"
+                className="form-control"
+                aria-label="With textarea"
                 value={body}
                 onChange={e => setBody(e.target.value)}
               ></textarea>
-            </label>
-            <label>
-              <span>Tags:</span>
+            </div>
+
+            <div className="input-group mb-3">
+              <span
+                className="input-group-text bg-dark text-light"
+                id="inputGroup-sizing-default"
+              >
+                Tags
+              </span>
               <input
                 type="text"
                 name="tags"
+                className="form-control"
                 required
                 placeholder="Insira as tags separadas por vírgula"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
                 value={tags}
                 onChange={e => setTags(e.target.value)}
               />
-            </label>
+            </div>
 
-            {!response.loading && <button className="btn">Editar</button>}
+            {!response.loading && (
+              <button className="w-25 btn btn-primary">Editar</button>
+            )}
             {response.loading && (
-              <button className="btn" disabled>
+              <button className="w-25 btn btn-primary" disabled>
                 Aguarde...
               </button>
             )}
             {response.error && <p className="error">{response.error}</p>}
             {formError && <p className="error">{formError}</p>}
           </form>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

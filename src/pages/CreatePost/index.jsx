@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthValue } from '../../context/AuthContext';
 import { useInsertDocument } from '../../hooks/useInsertDocument';
 
-import styles from './styles.module.css';
-
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [image, setImage] = useState('');
@@ -57,57 +55,99 @@ const CreatePost = () => {
   };
 
   return (
-    <div className={styles.createPost}>
-      <h2>Criar post</h2>
-      <p>Escreva sobre o que quiser e compartilhe o seu conhecimento!</p>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
-          <span>Título:</span>
+    <div className="container min-vh-100 mt-5 py-5 d-flex flex-column justify-content-center align-items-center gap-3">
+      <div className="text-center">
+        <h2>Criar post</h2>
+        <p>Escreva sobre o que quiser e compartilhe o seu conhecimento!</p>
+      </div>
+      <form
+        onSubmit={handleSubmit}
+        autoComplete="off"
+        className="w-100 d-flex flex-column align-items-center"
+      >
+        <div className="input-group mb-3">
+          <span
+            className="input-group-text bg-dark text-light"
+            id="inputGroup-sizing-default"
+          >
+            Título
+          </span>
           <input
             type="text"
             name="title"
+            className="form-control"
             required
             placeholder="Pense num bom título..."
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
             value={title}
             onChange={e => setTitle(e.target.value)}
           />
-        </label>
-        <label>
-          <span>URL da imagem:</span>
+        </div>
+
+        <div className="input-group mb-3">
+          <span
+            className="input-group-text bg-dark text-light"
+            id="inputGroup-sizing-default"
+          >
+            URL da imagem
+          </span>
           <input
             type="text"
             name="image"
+            className="form-control"
             required
             placeholder="Insira uma imagem que representa o seu post"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
             value={image}
             onChange={e => setImage(e.target.value)}
           />
-        </label>
-        <label>
-          <span>Conteúdo:</span>
+        </div>
+
+        <div className="input-group mb-3">
+          <span
+            className="input-group-text bg-dark text-light"
+            id="inputGroup-sizing-default"
+          >
+            Conteúdo
+          </span>
           <textarea
             name="body"
             required
             placeholder="Insira o conteúdo do post"
+            className="form-control"
+            aria-label="With textarea"
             value={body}
             onChange={e => setBody(e.target.value)}
           ></textarea>
-        </label>
-        <label>
-          <span>Tags:</span>
+        </div>
+
+        <div className="input-group mb-3">
+          <span
+            className="input-group-text bg-dark text-light"
+            id="inputGroup-sizing-default"
+          >
+            Tags
+          </span>
           <input
             type="text"
             name="tags"
+            className="form-control"
             required
             placeholder="Insira as tags separadas por vírgula"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
             value={tags}
             onChange={e => setTags(e.target.value)}
           />
-        </label>
+        </div>
 
-        {!response.loading && <button className="btn">Cadastrar</button>}
+        {!response.loading && (
+          <button className="w-25 btn btn-primary">Cadastrar</button>
+        )}
         {response.loading && (
-          <button className="btn" disabled>
+          <button className="w-25 btn btn-primary" disabled>
             Aguarde...
           </button>
         )}
