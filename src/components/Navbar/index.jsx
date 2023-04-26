@@ -4,6 +4,8 @@ import { useAuthentication } from '../../hooks/useAutentication';
 
 import { useAuthValue } from '../../context/AuthContext';
 
+import Logo from '../Logo';
+
 const Navbar = () => {
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
@@ -16,7 +18,7 @@ const Navbar = () => {
       <nav className="container d-flex justify-content-between gap-3">
         <h1>
           <NavLink className="navbar-brand text-warning fs-2" to="/">
-            Mini <span className="text-warning-emphasis">Blog</span>
+            <Logo />
           </NavLink>
         </h1>
 
