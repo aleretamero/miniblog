@@ -19,7 +19,7 @@ const About = () => {
       <div>
         <Link
           to="/posts/create"
-          className="btn btn-primary btn-lg m-5 py-3 px-5 fs-2"
+          className="btn btn-primary btn-lg m-5 py-2 px-4 fs-2"
         >
           Criar post
         </Link>
