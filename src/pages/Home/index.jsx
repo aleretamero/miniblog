@@ -35,7 +35,7 @@ const Home = () => {
             <button
               className="btn btn-outline-dark"
               id="button-addon2"
-              type="button"
+              type="submit"
             >
               Pesquisar
             </button>
