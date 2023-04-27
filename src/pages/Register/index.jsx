@@ -29,8 +29,6 @@ const Register = () => {
 
     const res = await createUser(user);
 
-    console.log(res);
-
     setDisplayName('');
     setEmail('');
     setPassword('');
@@ -86,7 +84,7 @@ const Register = () => {
         </div>
 
         <div className="mb-2">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             <span>Senha</span>
             <input
               type="password"
@@ -103,7 +101,7 @@ const Register = () => {
         </div>
 
         <div className="mb-4">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             <span>Confirmação de senha</span>
             <input
               type="password"
