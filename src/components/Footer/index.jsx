@@ -17,9 +17,9 @@ const Footer = () => {
             </NavLink>
           </div>
 
-          <div>
-            <span className="text-light">
-              &copy; 2023 code8bit Projeto Desenvolvido por Alexandre Retamero
+          <div className="text-light text-center">
+            <span>
+              &copy; 2023 Code8Bit Projeto Desenvolvido por Alexandre Retamero
             </span>
           </div>
         </div>
