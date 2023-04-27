@@ -1,20 +1,22 @@
 import { Link } from 'react-router-dom';
 
+import styles from './styles.module.scss';
+
 const PostDetail = ({ post }) => {
   return (
-    <div
-      className="card text-bg-dark mb-3 p-1"
-      style={{ width: '250px', height: '400px', overflow: 'hidden' }}
+    <Link
+      to={`/posts/${post.id}`}
+      className={`${styles.card} card text-bg-dark mb-3 p-1 shadow-lg text-decoration-none`}
     >
-      <img
-        src={post.image}
-        alt={post.title}
-        className="card-img-top"
-        style={{ height: '200px' }}
+      <div
+        className={styles.imgCard}
+        style={{
+          backgroundImage: `url(${post.image})`,
+        }}
       />
       <div
         className="card-body d-flex flex-column justify-content-between align-items-center"
-        style={{ height: '200px' }}
+        style={{ height: '180px' }}
       >
         <h5 className="card-title">{post.title}</h5>
         <p className="card-title">{post.createdBy}</p>
@@ -25,14 +27,8 @@ const PostDetail = ({ post }) => {
             </span>
           ))}
         </div>
-        <Link
-          to={`/posts/${post.id}`}
-          className="btn btn-primary w-100 py-2 d-block"
-        >
-          Ler
-        </Link>
       </div>
-    </div>
+    </Link>
   );
 };
 
