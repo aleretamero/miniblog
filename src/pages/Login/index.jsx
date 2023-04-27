@@ -57,7 +57,7 @@ const Login = () => {
         </div>
 
         <div className="mb-4">
-          <label for="exampleInputPassword1" className="form-label">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             <span>Senha</span>
             <input
               type="password"
