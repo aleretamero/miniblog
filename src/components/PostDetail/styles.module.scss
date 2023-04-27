@@ -1,0 +1,17 @@
+.card {
+  width: 270px;
+  height: 400px;
+  overflow: hidden;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  & .imgCard {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
