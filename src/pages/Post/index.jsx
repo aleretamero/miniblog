@@ -18,12 +18,12 @@ const Post = () => {
           <div className="card-body  d-flex flex-column gap-3">
             <h5 className="card-title text-center mb-3 fs-1">{post.title}</h5>
             <p className="card-text">{post.body}</p>
-            <div className="d-flex gap-2">
-              <p className="card-text text-sm fw-bold">
+            <div className="d-flex flex-wrap gap-2">
+              <p className="card-text text-sm fw-bold m-0">
                 Este post trata sobre:
               </p>
               {post.tagsArray.map(tag => (
-                <p key={tag}>#{tag}</p>
+                <p className='m-0' key={tag}>#{tag}</p>
               ))}
             </div>
           </div>
