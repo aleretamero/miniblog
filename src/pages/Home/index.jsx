@@ -2,6 +2,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import PostDetail from '../../components/PostDetail';
+// import { Query } from 'firebase/firestore';
 
 const Home = () => {
   const [query, setQuery] = useState('');
@@ -12,8 +13,12 @@ const Home = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    if (query) {
-      return navigate(`/search?q=${query}`);
+    let queryString = query;
+    queryString = queryString.toLowerCase();
+    if (queryString[0] === '#') queryString = queryString.slice(1);
+
+    if (queryString) {
+      return navigate(`/search?q=${queryString}`);
     }
   };
 
