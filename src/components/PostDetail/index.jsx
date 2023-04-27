@@ -19,11 +19,11 @@ const PostDetail = ({ post }) => {
         style={{ height: '180px' }}
       >
         <h5 className="card-title">{post.title}</h5>
-        <p className="card-title">{post.createdBy}</p>
-        <div>
+        <p className="card-title fs-2 fw-bold">{post.createdBy}</p>
+        <div className='d-flex flex-wrap'>
           {post.tagsArray.map(tag => (
-            <span className="card-text m-1" key={tag}>
-              #{tag}
+            <span className="card-text" key={tag}>
+              <span className='text-primary'>#</span>{tag}
             </span>
           ))}
         </div>
