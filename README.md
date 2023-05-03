@@ -5,9 +5,15 @@
 <br />
 
 <!-- Preview -->
-<!-- <div align="center">
-    <img width="500" src="./public/images/readme/preview.png" alt="Preview do MiniBlog">
-</div> -->
+<div align="center" >
+    <img width="500" src="./public/images/readme/preview-01.png" alt="Preview do projeto">
+</div>
+
+<br />
+
+<div align="center" >
+    <img width="500" src="./public/images/readme/preview-02.png" alt="Preview do projeto">
+</div>
 
 <hr />
 
