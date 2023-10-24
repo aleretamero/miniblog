@@ -25,7 +25,8 @@ Esse projeto é um Mini Blog que permite aos usuários se cadastrar, criar posta
 - [React](https://react.dev) - biblioteca para interfaces de usuário
 - [React Router Dom](https://reactrouter.com/en/main) - é uma biblioteca de roteamento que permite criar rotas e navegação de página.
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - é uma linguagem de programação.
-- [Bootstrap](https://getbootstrap.com) - framework CSS
+- [Firebase](https://firebase.google.com/?hl=pt) - framework CSS
+- [Bootstrap](https://getbootstrap.com) - é uma plataforma da Google para criar aplicativos com recursos de autenticação, banco de dados, etc.
 
 ## 🛠️ Modificando o projeto
 
