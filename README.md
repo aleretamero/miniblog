@@ -1,102 +1,88 @@
-<div align="center">
-  <img width="200" src="./public/logo.png" />
-</div>
+# Projeto MiniBlog
 
-<br />
+![preview](./public/preview.webp)
 
-<!-- Preview -->
-<div align="center" >
-    <img width="500" src="./public/images/readme/preview-01.png" alt="Preview do projeto">
-</div>
+## 💭 Descrição
 
-<br />
+Esse projeto é um Mini Blog que permite aos usuários se cadastrar, criar postagens, realizar buscas por tags, além de fornecer uma dashboard para edição e exclusão de postagens. O projeto utiliza o Firebase como backend para o armazenamento de dados e autenticação de usuários.
 
-<div align="center" >
-    <img width="500" src="./public/images/readme/preview-02.png" alt="Preview do projeto">
-</div>
+## 🧠 Funcionalidades
 
-<hr />
+✔️ **Registro de Usuários** - Os usuários podem criar contas para criar suas próprias postagens.
 
-<!-- Sobre -->
-<h2><img width="40" src="./public/images/readme/newspaper-solid.svg"> Sobre</h2>
+✔️ **Criação de Postagens** - Os usuários podem criar postagens com títulos, url da imagem, conteúdo e tags para categorização.
 
-<br />
+✔️ **Busca por Tags** - A funcionalidade de busca permite aos usuários encontrar postagens com base em tags específicas.
 
-<p>O MiniBlog é um site desenvolvido em React com o objetivo de permitir que os usuários publiquem e compartilhem suas ideias e pensamentos. O site conta com um sistema de autenticação para que apenas os usuários logados possam criar e editar postagens.
+✔️ **Dashboard de Usuário** - Os usuários têm acesso a uma dashboard para gerenciar suas postagens, incluindo edição e exclusão.
 
-<a href="https://miniblog-aleretamero.vercel.app/" target="_blank">Acesse o site clicando aqui</a>
+✔️ **Sistema de Autenticação** - O projeto utiliza a autenticação fornecida pelo Firebase.
 
-O MiniBlog apresenta uma interface intuitiva e fácil de usar, que permite que os usuários criem, leiam, editem e excluam suas postagens.
+✔️ **Sistema de Dados** - O projeto utiliza a firestore database fornecida pelo Firebase.
 
-</p>
+## 🖥️ Tecnologias Utilizadas
 
-<hr />
+- [React](https://react.dev) - biblioteca para interfaces de usuário
+- [React Router Dom](https://reactrouter.com/en/main) - é uma biblioteca de roteamento que permite criar rotas e navegação de página.
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - é uma linguagem de programação.
+- [Bootstrap](https://getbootstrap.com) - framework CSS
 
-<!-- Tecnologias -->
-<h2><img width="40" src="./public/images/readme/screwdriver-wrench-solid.svg"> Tecnologias</h2>
+## 🛠️ Modificando o projeto
 
-<br />
+### Siga as seguintes instruções para instalar e poder modificar o projeto em sua máquina:
 
-- React
-- Bootstrap
-- Firebase
+### 📋 Pré-requisitos:
 
-<hr />
+Para baixar, executar e modificar o projeto, você precisa ter instalado em sua máquina:
 
-<!-- Funcionalidades -->
-<h2><img width="40" src="./public/images/readme/gears-solid.svg"> Funcionalidades</h2>
+- [Node](https://nodejs.org/en)
+- Um gerenciador de pacotes, como o [PNPM](https://pnpm.io), [Npm](https://nodejs.org/en/) ou [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+- [Git](https://git-scm.com/downloads)
+- Editor de código ou IDE, como o [VSCode](https://code.visualstudio.com/Download)
 
-<br />
+### 🔧 Instalação e execução
 
-- Sistema de autenticação para permitir apenas que usuários logados criem, editem e excluam suas postagens.
-
-<hr />
-
-<!-- Como Baixar -->
-<h2><img width="40" src="./public/images/readme/download-solid.svg"> Como baixar e executar o projeto</h2>
-
-<br />
-
-- Faça o download do repositório clicando no botão "Code" acima e selecione a opção "Download ZIP".
-- Descompacte o arquivo ZIP em um diretório local.
-- Caso prefira, você também pode clonar o projeto utilizando git com o seguinte comando:
+1. Clone o repositório
 
 ```bash
-$ git clone https://github.com/aleretamero/miniblog.git
+git clone https://github.com/aleretamero/miniblog.git
 ```
 
-- Abra um terminal e navegue até o diretório do projeto.
-- Execute o comando npm install para instalar as dependências do projeto.
+2. Acesse a pasta do projeto
 
 ```bash
-$ npm install
+cd miniblog
 ```
 
-- Execute o comando npm start para iniciar o servidor local.
+3. Instale as dependências
 
 ```bash
-$ npm start
+npm install
+# ou
+pnpm install
+# ou
+yarn install
 ```
 
-<hr />
+4. Inicie o servidor de desenvolvimento do projeto
 
-<!-- Autor -->
-<h2><img width="40" src="./public/images/readme/user-pen-solid.svg"> Autor</h2>
+```bash
+npm start
+# ou
+pnpm start
+# ou
+yarn start
+```
 
-<br />
+Obs: o servidor iniciará na porta 3000 - acesse por: <http://localhost:3000/>
 
-<p>Projeto desenvolvido por <a href="https://github.com/aleretamero" target="_blank">Alexandre Retamero</a></p>
+## Colaboradores 🤝🤝
 
-<hr />
+| Foto                                                       | Nome                                                 |
+| ---------------------------------------------------------- | ---------------------------------------------------- |
+| <img src="https://github.com/aleretamero.png" width="100"> | [Alexandre Retamero](https://github.com/aleretamero) |
 
-<!-- Licença -->
-<h2><img width="40" src="./public/images/readme/file-pen-solid.svg"> Licença</h2>
+## Licença
 
-<br />
+[MIT](https://choosealicense.com/licenses/mit/)
 
-<p>Este projeto está licenciado sob a licença MIT. Consulte o arquivo <a href="LICENSE">LICENSE</a> para obter mais informações.</p>
-
-<hr />
-
-<!-- Footer -->
-<p align="center"> Feito com <img width="25" src="./public/images/readme/heart-solid.svg"> by aleretamero </p>
